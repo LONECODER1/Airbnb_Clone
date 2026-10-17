@@ -1,0 +1,198 @@
+.right-sidebar {
+  position: sticky;
+  top: 70px;
+  width: 100%;
+}
+
+/* Promo Card */
+.right-promo-card {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.right-promo-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.right-promo-icon {
+  display: flex;
+  align-items: center;
+}
+
+.right-promo-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.right-promo-terms {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.right-promo-claim-btn {
+  background: #f2f2f2;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.right-promo-claim-btn:hover {
+  background: #e8e8e8;
+}
+
+/* Card */
+.right-card {
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  background: #fff;
+}
+
+/* Price row */
+.right-price-row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.right-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.right-price-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.right-price-per {
+  font-size: 16px;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* Picker */
+.right-picker {
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.right-picker-dates {
+  display: flex;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.right-picker-field {
+  flex: 1;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.right-picker-field--left {
+  border-right: 1px solid #b0b0b0;
+}
+
+.right-picker-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.right-picker-value {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.right-picker-guests {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-cancellation-banner {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+/* Reserve button */
+.right-reserve-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--reserve);
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+  margin-bottom: 12px;
+}
+
+.right-reserve-btn:hover {
+  background: var(--reserve-hover);
+  opacity: 0.95;
+}
+
+.right-charge-note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Report */
+.report-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.report-btn:hover {
+  color: var(--ink);
+}
+
+.report-icon {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+}

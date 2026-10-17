@@ -1,0 +1,65 @@
+.main-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Two column layout for Photos + Amenities on Left, RightSidebar on Right */
+.photos-amenities-wrapper {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 370px;
+  gap: 80px;
+  position: relative;
+}
+
+.left-column {
+  min-width: 0;
+}
+
+.right-column {
+  position: relative;
+}
+
+/* Responsive layout */
+@media (max-width: 1128px) {
+  .photos-amenities-wrapper {
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .photos-amenities-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Toast Notification Modal */
+.toast-modal {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translate(-50%, 60px);
+  opacity: 0;
+  background-color: #222222;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
+  white-space: nowrap;
+}
+
+.toast-modal--visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}

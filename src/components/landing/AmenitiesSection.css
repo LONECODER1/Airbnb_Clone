@@ -1,0 +1,396 @@
+.amenities-section {
+  padding-top: 8px;
+}
+
+.amenities-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.amenity-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.amenity-name {
+  font-size: 15px;
+}
+
+.amenity-item--unavailable {
+  color: var(--muted2);
+}
+
+.amenity-item--unavailable .amenity-name,
+.amenity-item--unavailable .amenity-modal-name {
+  text-decoration: line-through;
+  color: var(--muted2);
+}
+
+.amenity-item--unavailable .amenity-icon,
+.amenity-item--unavailable .amenity-modal-icon {
+  color: var(--muted2);
+}
+
+.show-all-amenities-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 24px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.show-all-amenities-btn:hover {
+  background: var(--grey100);
+}
+
+/* Modal overlay */
+.amenities-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenities-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Modal header */
+.amenities-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--line);
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.amenities-modal-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+  flex-shrink: 0;
+}
+
+.amenities-modal-close:hover {
+  background: var(--grey100);
+}
+
+.amenities-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Modal body */
+.amenities-modal-body {
+  overflow-y: auto;
+  padding: 24px;
+  flex: 1;
+}
+
+.amenity-group {
+  margin-bottom: 32px;
+}
+
+.amenity-group:last-child {
+  margin-bottom: 0;
+}
+
+.amenity-group-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.amenity-group-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.amenity-modal-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.amenity-modal-item:last-child {
+  border-bottom: none;
+}
+
+.amenity-modal-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.amenity-modal-name {
+  font-size: 15px;
+}
+
+/* Reuse divider from PhotosSection */
+.section-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 24px 0;
+}
+
+/* Calendar Section */
+.calendar-section {
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+.calendar-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.calendar-subtitle {
+  font-size: 14px;
+  color: var(--muted2);
+  margin-bottom: 24px;
+}
+
+.calendar-container {
+  display: flex;
+  gap: 40px;
+}
+
+.calendar-month {
+  flex: 1;
+}
+
+.calendar-month-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  height: 24px;
+}
+
+.calendar-month-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+}
+
+.calendar-nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+
+.calendar-nav-btn:hover {
+  background: var(--grey100);
+}
+
+.calendar-nav-spacer {
+  width: 32px;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted2);
+  margin-bottom: 8px;
+}
+
+.calendar-weekdays span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 2px;
+}
+
+.calendar-day-empty {
+  height: 40px;
+}
+
+.calendar-day {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.day-number {
+  z-index: 2;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: border 0.1s;
+}
+
+.calendar-day:not(.calendar-day--disabled):not(.calendar-day--range-start):not(.calendar-day--range-end):hover .day-number {
+  border: 1.5px solid var(--ink);
+}
+
+/* Range Selection Styling */
+.calendar-day--in-range {
+  background: #f2f2f2;
+}
+
+.calendar-day--range-start {
+  position: relative;
+}
+
+.range-band-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: #f2f2f2;
+  z-index: 1;
+}
+
+.calendar-day--range-end {
+  position: relative;
+}
+
+.range-band-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: #f2f2f2;
+  z-index: 1;
+}
+
+.day-number--selected {
+  background: #222222;
+  color: #ffffff !important;
+  border-radius: 50%;
+}
+
+/* Disabled / Stroked Days */
+.calendar-day--disabled {
+  color: #e0e0e0;
+  cursor: default;
+}
+
+.calendar-day--disabled .day-number {
+  text-decoration: line-through;
+  color: #e0e0e0;
+}
+
+/* Calendar Footer */
+.calendar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.keyboard-btn {
+  width: 32px;
+  height: 24px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink);
+  padding: 0;
+}
+
+.clear-dates-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-dates-btn:hover {
+  color: #000;
+}

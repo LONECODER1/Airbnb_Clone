@@ -1,0 +1,142 @@
+.navbar {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-inner {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 -50px;
+  height: 85px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Left: Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-self: start;
+}
+
+/* Center wrapper */
+.navbar-center-wrapper {
+  justify-self: center;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-pill {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 40px;
+  box-shadow: 0 1px 4px #00000014;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.search-pill:hover {
+  box-shadow: 0 2px 8px #0000001a;
+}
+
+.search-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0 12px;
+}
+
+.search-guests {
+  color: var(--muted2);
+  font-weight: 400;
+}
+
+.search-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+
+.search-icon-wrap {
+  width: 32px;
+  height: 32px;
+  background: #ff385c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+/* Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;
+}
+
+.become-host-btn {
+  padding: 10px 12px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.become-host-btn:hover {
+  background: var(--grey100);
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 5px 5px 5px 12px;
+  background: var(--grey200);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background 0.1s;
+}
+
+.icon-btn--menu {
+  padding: 5px 5px 5px 10px;
+}
+
+.icon-btn:hover {
+  box-shadow: var(--shadow-hover);
+  background: var(--grey100);
+}
+
+.icon-wrap {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

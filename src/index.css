@@ -1,0 +1,98 @@
+@import url('https://cdn.jsdelivr.net/npm/airbnbcereal@1.1.0/stylesheet.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Airbnb Cereal VF';
+  src: url('https://cdn.jsdelivr.net/npm/airbnbcereal@1.1.0/AirbnbCerealApp-Book.woff2') format('woff2');
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal VF';
+  src: url('https://cdn.jsdelivr.net/npm/airbnbcereal@1.1.0/AirbnbCerealApp-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal VF';
+  src: url('https://cdn.jsdelivr.net/npm/airbnbcereal@1.1.0/AirbnbCerealApp-Bold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal VF';
+  src: url('https://cdn.jsdelivr.net/npm/airbnbcereal@1.1.0/AirbnbCerealApp-Black.woff2') format('woff2');
+  font-weight: 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Airbnb Cereal VF", "Airbnb Cereal App", Circular, -apple-system, BlinkMacSystemFont, "system-ui", Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --ink: #222222;
+  --muted: #6a6a6a;
+  --muted2: #717171;
+  --line: #dddddd;
+  --line-soft: #ebebeb;
+  --card-border: rgba(0, 0, 0, .08);
+  --rausch: #ff385c;
+  --reserve: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
+  --reserve-hover: linear-gradient(to right, #d81b5f 0%, #c31a5b 50%, #bd0463 100%);
+  --grey100: #f7f7f7;
+  --grey200: #f2f2f2;
+  --grey300: #ebebeb;
+  --greydark: #e8e8e8;
+  --container: 1180px;
+  --font: "Airbnb Cereal VF", "Airbnb Cereal App", Circular, -apple-system, BlinkMacSystemFont, "system-ui", Roboto, "Helvetica Neue", sans-serif;
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, .12);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, .18);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font);
+}
+
+body, input, select, textarea, button {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.43;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

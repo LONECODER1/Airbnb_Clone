@@ -1,0 +1,315 @@
+/* ===========================
+   Photo Tour Modal — Full Page
+   =========================== */
+.photo-tour-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #fff;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   Navbar
+   =========================== */
+.tour-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  height: 80px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tour-navbar-inner {
+  /* max-width: var(--container); */
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-navbar-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tour-icon-btn {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--ink);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.tour-icon-btn:hover {
+  background: var(--grey200);
+}
+
+.tour-icon-btn:active {
+  background: var(--grey300);
+  transform: scale(0.96);
+}
+
+.tour-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===========================
+   Page Content
+   =========================== */
+.tour-content {
+  padding-top: 24px;
+  padding-bottom: 80px;
+}
+
+.tour-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===========================
+   9-Section Cover Grid
+   =========================== */
+.tour-grid-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tour-grid-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tour-grid-img-wrap {
+  width: 100%;
+  aspect-ratio: 106 / 100;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--grey200);
+}
+
+.tour-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), filter 0.2s ease;
+}
+
+.tour-grid-card:hover .tour-grid-img {
+  transform: scale(1.04);
+  filter: brightness(0.94);
+}
+
+.tour-grid-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-grid-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.tour-grid-count {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===========================
+   Divider
+   =========================== */
+.tour-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 32px 0 0;
+}
+
+/* ===========================
+   Sections List — 50/50 Layout
+   =========================== */
+.tour-sections-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each section = side by side left + right */
+.tour-section-block {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line-soft);
+  scroll-margin-top: 90px;
+  gap: 0;
+}
+
+.tour-section-block:last-child {
+  border-bottom: none;
+}
+
+/* Left col: 50% — sticky title/subtext */
+.tour-section-left {
+  flex: 0 0 50%;
+  width: 50%;
+  padding-right: 48px;
+  box-sizing: border-box;
+}
+
+.tour-section-header-sticky {
+  position: sticky;
+  top: 96px;
+}
+
+.tour-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.tour-section-subtext {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right col: 50% — photo grid */
+.tour-section-right {
+  flex: 0 0 50%;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   Section Photo Grid
+   The pattern: first image full-width hero, 
+   remaining images 2 per row
+   =========================== */
+.section-photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Full-width hero image */
+.section-photo-item--full {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.section-photo-item--full .section-photo-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 2-column row for remaining photos */
+.section-photo-row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Half-width images */
+.section-photo-item--half {
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.section-photo-item--half .section-photo-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay effect */
+.section-photo-item--full::after,
+.section-photo-item--half::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.2s ease;
+  pointer-events: none;
+}
+
+.section-photo-item--full:hover::after,
+.section-photo-item--half:hover::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 900px) {
+  .tour-section-block {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tour-section-left {
+    flex: none;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .tour-section-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .tour-section-header-sticky {
+    position: static;
+  }
+
+  .tour-grid-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tour-grid-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
